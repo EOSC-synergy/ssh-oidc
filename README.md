@@ -11,6 +11,11 @@ simplest-to-use approach.
 - No need for OIDC client registration on the server
 - No need to enter passwords more than once after reboot
 
+The final usage is as simple as:
+```
+mccli ssh <hostname>
+```
+
 ## Features
 The tools the we use and describe in this context will offer many
 features.
@@ -45,10 +50,6 @@ features.
     - gets you an account on the remote (talks with `motley-cue`)
     - calls ssh and passes the AccessToken
 
-The final usage is as simple as:
-```
-mccli ssh <hostname>
-```
 
 # Server Installation
 
@@ -65,7 +66,7 @@ Installation is mostly a matter of installing the packages:
 - `motley-cue` and `pam-ssh-oidc`
 
 Details are described in the linked chapters
-[pam-ssh-oidc](pam-ssh-oidc) and [motley-cue](motley-cue)
+[pam-ssh-oidc](pam-ssh-oidc.md) and [motley-cue](motley-cue.md)
 
 
 # Client Installation
