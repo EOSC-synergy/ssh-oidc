@@ -16,39 +16,39 @@ The final usage is as simple as:
 mccli ssh <hostname>
 ```
 
-## Features
-The tools the we use and describe in this context will offer many
-features.
-
-- The PAM MODULE **pam-ssh-oidc** allows ssh to accept Access Tokens in
-    addition to passwords.
-- The Mapping Daemon **motley-cue** is an additional daemon on the ssh
-    server. It is in charge of "the magic behind the scenes" and deserves
-    special attention by the ssh server administrators! It is in charge of
-    several tasks:
-    - Authorisation Decision: Is an incoming user welcome on the system or
-        not. `motley-cue` offers **two dimensions** for making this decision:
-        - **Membership**: 
-            - Memebership in a *Virtual Organisation* (a
-                group managed remotely, e.g. on an OIDC Provider). A system
-                administrator essentially delegates the decision which users
-                may log in to the system to the administrator of the Virtual
-                Organisation.
-            - *Individual Users*: Of course, it is also possible to authorise
-                individual users (just as before). However, now users are
-                identified by the OIDC `sub` and `iss` claims.
-        - **Assuranc**: The second dimension is based on **how well a user
-            is known**. We use the [Refeds Assurance
-            Framework](https://refeds.org/assurance) to describe a user.
-            
-        This allows to only give logins to users that are in a
-        specific group AND have a certain level of assurance.
-- A commandline tool **oidc-agent** that provides the functions for
-`ssh-agent` but for ssh.
-- A commandline wrapper **mcc-ssh** that 
-    - gets you an AccessToken
-    - gets you an account on the remote (talks with `motley-cue`)
-    - calls ssh and passes the AccessToken
+<!--## Features-->
+<!--The tools the we use and describe in this context will offer many-->
+<!--features.-->
+<!---->
+<!--- The PAM MODULE **pam-ssh-oidc** allows ssh to accept Access Tokens in-->
+<!--    addition to passwords.-->
+<!--- The Mapping Daemon **motley-cue** is an additional daemon on the ssh-->
+<!--    server. It is in charge of "the magic behind the scenes" and deserves-->
+<!--    special attention by the ssh server administrators! It is in charge of-->
+<!--    several tasks:-->
+<!--    - Authorisation Decision: Is an incoming user welcome on the system or-->
+<!--        not. `motley-cue` offers **two dimensions** for making this decision:-->
+<!--        - **Membership**: -->
+<!--            - Memebership in a *Virtual Organisation* (a-->
+<!--                group managed remotely, e.g. on an OIDC Provider). A system-->
+<!--                administrator essentially delegates the decision which users-->
+<!--                may log in to the system to the administrator of the Virtual-->
+<!--                Organisation.-->
+<!--            - *Individual Users*: Of course, it is also possible to authorise-->
+<!--                individual users (just as before). However, now users are-->
+<!--                identified by the OIDC `sub` and `iss` claims.-->
+<!--        - **Assuranc**: The second dimension is based on **how well a user-->
+<!--            is known**. We use the [Refeds Assurance-->
+<!--            Framework](https://refeds.org/assurance) to describe a user.-->
+<!--            -->
+<!--        This allows to only give logins to users that are in a-->
+<!--        specific group AND have a certain level of assurance.-->
+<!--- A commandline tool **oidc-agent** that provides the functions for-->
+<!--`ssh-agent` but for ssh.-->
+<!--- A commandline wrapper **mcc-ssh** that -->
+<!--    - gets you an AccessToken-->
+<!--    - gets you an account on the remote (talks with `motley-cue`)-->
+<!--    - calls ssh and passes the AccessToken-->
 
 
 # Server Installation
