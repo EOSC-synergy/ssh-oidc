@@ -4,7 +4,8 @@ Install with either
 - `apt-get install motley-cue`
 - `yum install motley-cue`
 
-This will pull a couple of dependencies, most notably `nginx`. You SHOULD
+This will pull a couple of dependencies, most notably `nginx` (for which
+epel-release is required on centos7). You SHOULD
 get a host-certificate for your server and enable https in nginx. This is
 not part of this documentation. 
 
@@ -19,8 +20,8 @@ not part of this documentation.
     - We succeeded in running in enforced mode on centos8, by using these
         commands:
         ```config
-        semodule -X 300 -i my-gunicorn.pp
-        semodule -X 300 -i my-sshd.pp
+        semodule -X 300 -i /usr/local/share/motley-cue/motley-cue-gunicorn.pp
+        semodule -X 300 -i /usr/local/share/motley-cue/motley-cue-sshd.pp
         setsebool -P nis_enabled 1
         ```
     - Feedback is appreciated
