@@ -180,6 +180,12 @@ Use with
 
 It is as simple as this!
 
+# More Material
+
+We have two presentations:
+- The (short) overview: [https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY](https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY)
+- The detailed one: [https://docs.google.com/presentation/d/1CExFLow9ZRQtU4vVSnBee9Cq8_2UAPAgr7uZpjubTWY](https://docs.google.com/presentation/d/1CExFLow9ZRQtU4vVSnBee9Cq8_2UAPAgr7uZpjubTWY)
+
 # Acknowledgements
 
 This page documents a set of tools that have been developed in a joint
