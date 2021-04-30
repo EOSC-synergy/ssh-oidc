@@ -93,8 +93,9 @@ The currently supported Linuxes are:
 Install with either of:
 - `apt-get install oidc-agent`
 <!--FIXME-->
-- add commandline for archlinux here
+<!-- - add commandline for archlinux here -->
 - `yum install oidc-agent`
+
 For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
     
 You will need to create an oidc-agent configuration. The shortest commandline for this is:
