@@ -83,6 +83,13 @@ On the client you will need two basic tools:
 ## `oidc-agent`
 oidc agent is available as packages via [https://repo.data.kit.edu](https://repo.data.kit.edu)
 
+Follow the instructions there to support the correct repository for apt or yum.
+
+The currently supported Linuxes are:
+- Debian (stable + testing)
+- Ubuntu (20.04 + 18.04)
+- Centos (7 + 8)
+
 Install with either of:
 - `apt-get install oidc-agent`
 <!--FIXME-->
