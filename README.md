@@ -98,7 +98,7 @@ Install with either of:
 - `brew install oidc-agent`
     
 You will need to create an oidc-agent configuration. The shortest commandline for this is:
-` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "email eduperson_assurance offline_access" egi`
+` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
 
 For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-agent) and the
 [github](https://github.com/indigo-dc/oidc-agent) page.
