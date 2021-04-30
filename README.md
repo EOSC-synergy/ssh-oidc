@@ -95,7 +95,7 @@ Install with either of:
 <!--FIXME-->
 - add commandline for archlinux here
 - `yum install oidc-agent`
-- `brew install oidc-agent`
+For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
     
 You will need to create an oidc-agent configuration. The shortest commandline for this is:
 ` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
