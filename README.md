@@ -112,7 +112,7 @@ It is as simple as this!
 
 We have two presentations:
 - The (short) overview: [https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY](https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY)
-- The detailed one: [https://docs.google.com/presentation/d/1CExFLow9ZRQtU4vVSnBee9Cq8_2UAPAgr7uZpjubTWY](https://docs.google.com/presentation/d/1CExFLow9ZRQtU4vVSnBee9Cq8_2UAPAgr7uZpjubTWY)
+- The detailed one: [https://docs.google.com/presentation/d/17HM11YjafC5VA4_o2EjNrtbRqJGgQP0q92C_uqFAM6A/edit?usp=sharing](https://docs.google.com/presentation/d/17HM11YjafC5VA4_o2EjNrtbRqJGgQP0q92C_uqFAM6A/edit?usp=sharing)
 
 # Acknowledgements
 
