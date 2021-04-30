@@ -96,6 +96,8 @@ Install with either of:
 <!-- - add commandline for archlinux here -->
 - `yum install oidc-agent`
 
+For any other Linux distributions, you will have to [install from source](https://indigo-dc.gitbook.io/oidc-agent/installation/install#from-source).
+
 For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
     
 You will need to create an oidc-agent configuration. The shortest commandline for this is:
