@@ -1,4 +1,4 @@
-# What is pam-ssh-oidc
+# What is ssh-oidc
 
 It's a set of tools that allows (you guessed it) ssh with OIDC. What you
 might not have guessed: We go for the difficult-to-implement but
