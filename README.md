@@ -94,7 +94,7 @@ You will need to create an oidc-agent configuration. The shortest commandline fo
 ` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "email eduperson_assurance offline_access" egi`
 
 For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-agent) and the
-(gitlab)[https://github.com/indigo-dc/oidc-agent] page.
+[github](https://github.com/indigo-dc/oidc-agent) page.
 
 ## `mc_ssh`
 
