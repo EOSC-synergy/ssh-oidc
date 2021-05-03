@@ -1,4 +1,4 @@
-# What is pam-ssh-oidc
+# What is ssh-oidc
 
 It's a set of tools that allows (you guessed it) ssh with OIDC. What you
 might not have guessed: We go for the difficult-to-implement but
@@ -83,18 +83,28 @@ On the client you will need two basic tools:
 ## `oidc-agent`
 oidc agent is available as packages via [https://repo.data.kit.edu](https://repo.data.kit.edu)
 
+Follow the instructions there to support the correct repository for apt or yum.
+
+The currently supported Linuxes are:
+- Debian (stable + testing)
+- Ubuntu (20.04 + 18.04)
+- Centos (7 + 8)
+
 Install with either of:
 - `apt-get install oidc-agent`
 <!--FIXME-->
-- add commandline for archlinux here
+<!-- - add commandline for archlinux here -->
 - `yum install oidc-agent`
-- `brew install oidc-agent`
+
+For any other Linux distributions, you will have to [install from source](https://indigo-dc.gitbook.io/oidc-agent/installation/install#from-source).
+
+For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
     
 You will need to create an oidc-agent configuration. The shortest commandline for this is:
-` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "email eduperson_assurance offline_access" egi`
+` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
 
 For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-agent) and the
-(gitlab)[https://github.com/indigo-dc/oidc-agent] page.
+[github](https://github.com/indigo-dc/oidc-agent) page.
 
 ## `mc_ssh`
 
@@ -112,7 +122,7 @@ It is as simple as this!
 
 We have two presentations:
 - The (short) overview: [https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY](https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY)
-- The detailed one: [https://docs.google.com/presentation/d/1CExFLow9ZRQtU4vVSnBee9Cq8_2UAPAgr7uZpjubTWY](https://docs.google.com/presentation/d/1CExFLow9ZRQtU4vVSnBee9Cq8_2UAPAgr7uZpjubTWY)
+- The detailed one: [https://docs.google.com/presentation/d/17HM11YjafC5VA4_o2EjNrtbRqJGgQP0q92C_uqFAM6A/edit?usp=sharing](https://docs.google.com/presentation/d/17HM11YjafC5VA4_o2EjNrtbRqJGgQP0q92C_uqFAM6A/edit?usp=sharing)
 
 # Acknowledgements
 
