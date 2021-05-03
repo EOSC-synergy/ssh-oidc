@@ -101,7 +101,7 @@ For any other Linux distributions, you will have to [install from source](https:
 For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
     
 You will need to create an oidc-agent configuration. The shortest commandline for this is:
-` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_assurance eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
+` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
 
 For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-agent) and the
 [github](https://github.com/indigo-dc/oidc-agent) page.
