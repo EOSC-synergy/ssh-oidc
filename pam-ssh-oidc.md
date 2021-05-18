@@ -9,12 +9,15 @@ to prompt for Access Tokens via Pluggable Authentication Module (PAM).
 Install with either
 - `apt-get install pam-ssh-oidc-autoconfig`
 - `yum install pam-ssh-oidc-autoconfig`
+
 or
+
 - `apt-get install pam-ssh-oidc`
 - `yum install pam-ssh-oidc`
 
-The installation will modify `/etc/pam.d/sshd` to add support for
-pam-ssh-oidc. The pam module is configured in `/etc/pam.d/pam-ssh-oidc-config.ini`
+The pam module itself is configured in `/etc/pam.d/pam-ssh-oidc-config.ini`,
+the default pointing to the `motley-cue` instance, which is assumed to be
+on localhost.
 
 You can verify it's working by `ssh <anything>@<hostname you installed on>`
 You should be prompted with
