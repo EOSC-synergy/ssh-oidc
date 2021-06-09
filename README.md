@@ -6,7 +6,7 @@ simplest-to-use approach.
 
 ## Usability
 
-- No modification of ssh-client (except for Windows where we provide an extenstion to putty)
+- No modification of ssh-client (except for Windows where we provide an extension to putty)
 - No modification of ssh-server
 - No need for OIDC client registration on the server
 - No need to enter passwords more than once after reboot
@@ -61,6 +61,7 @@ The currently supported Linuxes are:
 - Debian (stable + testing)
 - Ubuntu (20.04 + 18.04)
 - Centos (7 + 8)
+- openSUSE (tumbleweed, leap 15.2 + 15.3)
 
 Installation is mostly a matter of installing the packages:
 - `motley-cue` and `pam-ssh-oidc`
@@ -110,7 +111,7 @@ For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-age
 
 Install with
 
-- `pip install mc-ssh`
+- `pip install mc_ssh`
 
 Use with 
 
