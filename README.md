@@ -74,14 +74,14 @@ Please follow installation instructions at
 Useful commandlines for generating an oidc-agent configuration are:
 - **EGI Check-in**:
     ```
-    oidc-gen --pub --iss https://aai.egi.eu/oidc 
-        --scope "openid profile email offline_access  
+    oidc-gen --pub --iss https://aai.egi.eu/oidc \
+        --scope "openid profile email offline_access \
             eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi
     ```
 - **WLCG**: 
     ```
     oidc-gen --pub  --issuer https://wlcg.cloud.cnaf.infn.it/ \
-        --scope "openid profile offline_access wlcg.groups wlcg
+        --scope "openid profile offline_access wlcg.groups wlcg \
             eduperson_entitlement eduperson_scoped_affiliation " wlcg
     ```
 - **Helmholtz-AAI**: 
