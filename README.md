@@ -72,16 +72,28 @@ Please follow installation instructions at
 [https://indigo-dc.gitbook.io/oidc-agent/installation](https://indigo-dc.gitbook.io/oidc-agent/installation)
 
 Useful commandlines for generating an oidc-agent configuration are:
-- **EGI Check-in**: `oidc-gen --pub --iss https://aai.egi.eu/oidc \
-    --scope "openid profile email offline_access  \
-    eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
-- **WLCG**: `oidc-gen --pub  --issuer https://wlcg.cloud.cnaf.infn.it/ \
-    --scope "openid profile offline_access wlcg.groups wlcg \
-    eduperson_entitlement eduperson_scoped_affiliation " wlcg`
-- **Helmholtz-AAI**: `oidc-gen --pub --iss https://login.helmholtz.de/oauth2/ \
-    --scope "openid profile email offline_access \
-    eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" helmholtz`
-- **Google**: `oidc-gen --pub --iss https://accounts.google.com/ --flow device  --scope max google`
+- **EGI Check-in**:
+    ```
+    oidc-gen --pub --iss https://aai.egi.eu/oidc 
+        --scope "openid profile email offline_access  
+            eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi
+    ```
+- **WLCG**: 
+    ```
+    oidc-gen --pub  --issuer https://wlcg.cloud.cnaf.infn.it/ \
+        --scope "openid profile offline_access wlcg.groups wlcg
+            eduperson_entitlement eduperson_scoped_affiliation " wlcg
+    ```
+- **Helmholtz-AAI**: 
+    ```
+    oidc-gen --pub --iss https://login.helmholtz.de/oauth2/ \
+        --scope "openid profile email offline_access \
+            eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" helmholtz
+    ```
+- **Google**: 
+    ```
+    oidc-gen --pub --iss https://accounts.google.com/ --flow device  --scope max google
+    ```
 
 <!--
 oidc agent is available as packages via [https://repo.data.kit.edu](https://repo.data.kit.edu)
