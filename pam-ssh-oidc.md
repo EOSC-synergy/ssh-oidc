@@ -17,7 +17,7 @@ or
 
 The pam module itself is configured in `/etc/pam.d/pam-ssh-oidc-config.ini`,
 the default pointing to the `motley-cue` instance, which is assumed to be
-on localhost.
+on localhost. If you enabled HTTPS for your `motley-cue` instance, please make sure the configured `motley-cue` hostname matches the one in the host certificate.
 
 You can verify it's working by `ssh <anything>@<hostname you installed on>`
 You should be prompted with

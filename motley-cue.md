@@ -1,8 +1,9 @@
 # Mapper (`motley-cue`)
 
-Install with either
+Depending on your distribution, install with either:
 - `apt-get install motley-cue`
 - `yum install motley-cue`
+- `zypper install motley-cue`
 
 This will pull a couple of dependencies, most notably `nginx` (for which
 epel-release is required on centos7). You SHOULD
@@ -17,11 +18,11 @@ not part of this documentation.
 
 - Notes on selinux (for centos7 and centos8):
     - We tested `pam-ssh-oidc` and `motley-cue` in permissive mode only.
-    - We succeeded in running in enforced mode on centos8, by using these
-        commands:
+    - We succeeded in running in enforced mode, by using these commands:
         ```config
-        semodule -X 300 -i /usr/local/share/motley-cue/motley-cue-gunicorn.pp
-        semodule -X 300 -i /usr/local/share/motley-cue/motley-cue-sshd.pp
+        semodule -i /usr/share/motley-cue/selinux/motley-cue-gunicorn.pp
+        semodule -i /usr/share/motley-cue/selinux/motley-cue-sshd.pp
+        semodule -i /usr/share/motley-cue/selinux/motley-cue-nginx.pp
         setsebool -P nis_enabled 1
         ```
     - Feedback is appreciated
@@ -64,19 +65,24 @@ and follows these specifications:
     - [AARC-G021 Exchange of specific assurance information between Infrastructures](https://aarc-community.org/guidelines/aarc-g021)
 
 ## Authorisation Configuration
-The group definitions allowed include:
+You can support multiple OPs and configure authorisation for each OP separately.
+There are three options to authorise users:
+- authorise all: allow all users from a trusted OP
+- individual: authorise single users via their unique identifier given by `sub` + `iss`
+- VO-based: authorise users that are members of a specific VO (or a set of VOs)
+
+The VO definitions allowed include:
 - String list of groups
 - Entitlements according to [AARC-G002 Expressing group membership and role information](https://aarc-community.org/wp-content/uploads/2017/11/AARC-JRA1.4A-201710.pdf)
-- The default is:
-```
-group = [
-    "urn:geant:helmholtz.de:group:KIT#login-dev.helmholtz.de",
-    'urn:mace:egi.eu:group:mteam.data.kit.edu:role=member#aai.egi.eu',
-    "urn:mace:egi.eu:group:eosc-synergy.eu"
-]
-```
-- You can find out your own groups with this client comment. (See installation for the client later):
+where the claim containing the VOs is configurable as well.
 
-    `flaat-userinfo --oidc egi`
+The default configuration contains several examples, but you'll need to modify `/etc/motley_cue/motley_cue.conf` to enable any authorisation.
+
+You can find out your own groups with:
+```
+pip install flaat
+flaat-userinfo --oidc egi
+```
+
 
 

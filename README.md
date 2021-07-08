@@ -6,7 +6,7 @@ simplest-to-use approach.
 
 ## Usability
 
-- No modification of ssh-client (except for Windows where we provide an extenstion to putty)
+- No modification of ssh-client (except for Windows where we provide an extension to putty)
 - No modification of ssh-server
 - No need for OIDC client registration on the server
 - No need to enter passwords more than once after reboot
@@ -49,7 +49,6 @@ mccli ssh <hostname>
 <!--    - gets you an AccessToken-->
 <!--    - gets you an account on the remote (talks with `motley-cue`)-->
 <!--    - calls ssh and passes the AccessToken-->
-
 
 
 # Client Installation
@@ -127,7 +126,7 @@ For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-age
 
 Install with
 
-- `pip install mc-ssh`
+- `pip install mc_ssh`
 
 Use either of:
 
