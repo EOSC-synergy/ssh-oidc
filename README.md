@@ -51,11 +51,67 @@ mccli ssh <hostname>
 <!--    - calls ssh and passes the AccessToken-->
 
 
-# Server Installation
 
-**If you want to test the client first, you may use our
+# Client Installation
+
+**For testing the client, we provide a demonstration server at
 [ssh-oidc-demo](https://ssh-oidc-demo.data.kit.edu) server**
 
+
+On the client you will need two basic tools:
+
+- oidc-agent: To obtain oidc AccessTokens
+- motley-cue shell (`mc_ssh`) for 
+    - getting AccessTokens
+    - communicating with the remote motley-cue
+    - Calling SSH with an AccessToken
+
+
+## oidc-agent
+Please follow installation instructions at
+[https://indigo-dc.gitbook.io/oidc-agent/installation](https://indigo-dc.gitbook.io/oidc-agent/installation)
+
+<!--
+oidc agent is available as packages via [https://repo.data.kit.edu](https://repo.data.kit.edu)
+
+Follow the instructions there to support the correct repository for apt or yum.
+
+The currently supported Linuxes are:
+- Debian (stable + testing)
+- Ubuntu (20.04 + 18.04)
+- Centos (7 + 8)
+
+Install with either of:
+- `apt-get install oidc-agent`
+- `yum install oidc-agent`
+
+For any other Linux distributions, you will have to [install from source](https://indigo-dc.gitbook.io/oidc-agent/installation/install#from-source).
+
+For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
+    
+You will need to create an oidc-agent configuration. The shortest commandline for this is:
+` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
+
+For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-agent) and the
+[github](https://github.com/indigo-dc/oidc-agent) page.
+-->
+
+## mc_ssh
+
+Install with
+
+- `pip install mc-ssh`
+
+Use either of:
+
+- `mccli ssh ssh-oidc-demo.data.kit.edu --iss https://aai.egi.eu/oidc`
+- `mccli ssh ssh-oidc-demo.data.kit.edu --oidc egi`
+- `ACCESS_TOKEN=<access_token> mccli ssh ssh-oidc-demo.data.kit.edu`
+
+It is as simple as this!
+
+
+# Server Installation
 
 Packages are available at [https://repo.data.kit.edu](https://repo.data.kit.edu)
 
@@ -72,55 +128,6 @@ Installation is mostly a matter of installing the packages:
 Details are described in the linked chapters
 [pam-ssh-oidc](pam-ssh-oidc.md) and [motley-cue](motley-cue.md)
 
-
-# Client Installation
-
-On the client you will need two basic tools:
-
-- oidc-agent: To obtain oidc AccessTokens
-- motley-cue shell (`mc_ssh`) for 
-    - getting AccessTokens
-    - communicating with the remote motley-cue
-    - Calling SSH with an AccessToken
-
-
-## `oidc-agent`
-oidc agent is available as packages via [https://repo.data.kit.edu](https://repo.data.kit.edu)
-
-Follow the instructions there to support the correct repository for apt or yum.
-
-The currently supported Linuxes are:
-- Debian (stable + testing)
-- Ubuntu (20.04 + 18.04)
-- Centos (7 + 8)
-
-Install with either of:
-- `apt-get install oidc-agent`
-<!--FIXME-->
-<!-- - add commandline for archlinux here -->
-- `yum install oidc-agent`
-
-For any other Linux distributions, you will have to [install from source](https://indigo-dc.gitbook.io/oidc-agent/installation/install#from-source).
-
-For MacOS, follow the instructions at [https://indigo-dc.gitbook.io/oidc-agent/macos/installation](https://indigo-dc.gitbook.io/oidc-agent/macos/installation).
-    
-You will need to create an oidc-agent configuration. The shortest commandline for this is:
-` oidc-gen --pub --issuer https://aai.egi.eu/oidc --scope "openid profile email offline_access eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi`
-
-For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-agent) and the
-[github](https://github.com/indigo-dc/oidc-agent) page.
-
-## `mc_ssh`
-
-Install with
-
-- `pip install mc-ssh`
-
-Use with 
-
-`mccli ssh <hostname>`
-
-It is as simple as this!
 
 # More Material
 
