@@ -71,7 +71,10 @@ On the client you will need two basic tools:
 Please follow installation instructions at
 [https://indigo-dc.gitbook.io/oidc-agent/installation](https://indigo-dc.gitbook.io/oidc-agent/installation)
 
-Useful commandlines for generating an oidc-agent configuration are:
+Useful commandlines for generating an oidc-agent configuration are listed
+here. (You may add `--flow device` if you run oidc-agent on a remote
+host.)
+
 - **EGI Check-in**:
     ```
     oidc-gen --pub --iss https://aai.egi.eu/oidc \
