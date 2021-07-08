@@ -53,6 +53,10 @@ mccli ssh <hostname>
 
 # Server Installation
 
+**If you want to test the client first, you may use our
+[ssh-oidc-demo](https://ssh-oidc-demo.data.kit.edu) server**
+
+
 Packages are available at [https://repo.data.kit.edu](https://repo.data.kit.edu)
 
 Follow the instructions there to support the correct repository for apt or yum.
