@@ -60,7 +60,7 @@ mccli ssh <hostname>
 On the client you will need two basic tools:
 
 - oidc-agent: To obtain oidc AccessTokens
-- motley-cue shell (`mc_ssh`) for 
+- motley-cue command-line tool (`mccli`) for
     - getting AccessTokens
     - communicating with the remote motley-cue
     - Calling SSH with an AccessToken
@@ -122,11 +122,11 @@ For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-age
 [github](https://github.com/indigo-dc/oidc-agent) page.
 -->
 
-## mc_ssh
+## mccli
 
 Install with
 
-- `pip install mc_ssh`
+- `pip install mccli`
 
 Use either of:
 
