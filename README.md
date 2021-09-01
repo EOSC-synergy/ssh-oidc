@@ -126,7 +126,7 @@ For more information there is a [gitbook](https://indigo-dc.gitbooks.io/oidc-age
 
 Install with
 
-- `pip install mc_ssh`
+- `pip install mccli`
 
 Use either of:
 
