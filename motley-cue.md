@@ -13,8 +13,7 @@ not part of this documentation.
 ## Host Configuration
 
 - Open your firewall on port 8080
-- **OR** install a hostcertificate with `nginx` and open your firewall on
-    port 443
+- **OR** install a host certificate with `nginx` and open your firewall on port 443
 
 - Notes on selinux (for centos7 and centos8):
     - We tested `pam-ssh-oidc` and `motley-cue` in permissive mode only.
@@ -30,13 +29,11 @@ not part of this documentation.
 ## motley-cue configuration
 
 Configuration of `motley-cue` takes place in `/etc/motley-cue`:
-- `gunicorn.conf.py`: Daemon configuration (glues it toegether with nginx (via `/etc/nginx/sites-enabled/nginx.motley_cue`)
-- **`motley_cue.conf`: Authorisation configuration**: Allows definition of
-    the Virtual Organisation (or groups) that are allowed to use the service.
-- **`feudal_adapter.conf`: Account creation configuration**: Allows (among
-    others to configure the account creation, including the levels of
-    assurance. 
-- `motley_cue.env`: Environment variables for `motley_cue`
+- **`motley_cue.conf`: Authorisation configuration**: Allows definition of the Virtual Organisation (or groups) that are allowed to use the service.
+- **`feudal_adapter.conf`: Account creation configuration**: Allows among others to configure the account creation, including the levels of assurance.
+
+Additional configuration:
+- **`/etc/nginx/sites-enabled/nginx.motley_cue`: NGINX configuration**: web-server specific configurations, such as ports or host certificates.
 
 ## Assurance Configuration
 The config file is self documenting. Even more information
