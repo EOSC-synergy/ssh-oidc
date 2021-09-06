@@ -154,6 +154,9 @@ Installation is mostly a matter of installing the packages:
 Details are described in the linked chapters
 [pam-ssh-oidc](pam-ssh-oidc.md) and [motley-cue](motley-cue.md)
 
+# Frequently Asked Questions
+
+Are collected in our [FAQ](faq.md).
 
 # More Material
 
