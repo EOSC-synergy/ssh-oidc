@@ -60,6 +60,11 @@ require = profile/espresso |
 and follows these specifications:
     - [Refeds Assurance Framework (RAF)](https://refeds.org/assurance)
     - [AARC-G021 Exchange of specific assurance information between Infrastructures](https://aarc-community.org/guidelines/aarc-g021)
+- You can find out your own assurance information with:
+    ```
+    mccli info --oidc <oidc-agent account name>
+    ```
+
 
 ## Authorisation Configuration
 You can support multiple OPs and configure authorisation for each OP separately.
@@ -73,12 +78,11 @@ The VO definitions allowed include:
 - Entitlements according to [AARC-G002 Expressing group membership and role information](https://aarc-community.org/wp-content/uploads/2017/11/AARC-JRA1.4A-201710.pdf)
 where the claim containing the VOs is configurable as well.
 
-The default configuration contains several examples, but you'll need to modify `/etc/motley_cue/motley_cue.conf` to enable any authorisation.
+The default configuration contains several examples (commented out), but you'll need to modify `/etc/motley_cue/motley_cue.conf` to enable any authorisation.
 
 You can find out your own groups with:
 ```
-pip install flaat
-flaat-userinfo --oidc egi
+mccli info --oidc <oidc-agent account name>
 ```
 
 
