@@ -13,8 +13,7 @@ not part of this documentation.
 ## Host Configuration
 
 - Open your firewall on port 8080
-- **OR** install a hostcertificate with `nginx` and open your firewall on
-    port 443
+- **OR** install a host certificate with `nginx` and open your firewall on port 443
 
 - Notes on selinux (for centos7 and centos8):
     - We tested `pam-ssh-oidc` and `motley-cue` in permissive mode only.
@@ -30,13 +29,11 @@ not part of this documentation.
 ## motley-cue configuration
 
 Configuration of `motley-cue` takes place in `/etc/motley-cue`:
-- `gunicorn.conf.py`: Daemon configuration (glues it toegether with nginx (via `/etc/nginx/sites-enabled/nginx.motley_cue`)
-- **`motley_cue.conf`: Authorisation configuration**: Allows definition of
-    the Virtual Organisation (or groups) that are allowed to use the service.
-- **`feudal_adapter.conf`: Account creation configuration**: Allows (among
-    others to configure the account creation, including the levels of
-    assurance. 
-- `motley_cue.env`: Environment variables for `motley_cue`
+- **`motley_cue.conf`: Authorisation configuration**: Allows definition of the Virtual Organisation (or groups) that are allowed to use the service.
+- **`feudal_adapter.conf`: Account creation configuration**: Allows among others to configure the account creation, including the levels of assurance.
+
+Additional configuration:
+- **`/etc/nginx/sites-enabled/nginx.motley_cue`: NGINX configuration**: web-server specific configurations, such as ports or host certificates.
 
 ## Assurance Configuration
 The config file is self documenting. Even more information
@@ -63,6 +60,11 @@ require = profile/espresso |
 and follows these specifications:
     - [Refeds Assurance Framework (RAF)](https://refeds.org/assurance)
     - [AARC-G021 Exchange of specific assurance information between Infrastructures](https://aarc-community.org/guidelines/aarc-g021)
+- You can find out your own assurance information with:
+    ```
+    mccli info --oidc <oidc-agent account name>
+    ```
+
 
 ## Authorisation Configuration
 You can support multiple OPs and configure authorisation for each OP separately.
@@ -76,12 +78,11 @@ The VO definitions allowed include:
 - Entitlements according to [AARC-G002 Expressing group membership and role information](https://aarc-community.org/wp-content/uploads/2017/11/AARC-JRA1.4A-201710.pdf)
 where the claim containing the VOs is configurable as well.
 
-The default configuration contains several examples, but you'll need to modify `/etc/motley_cue/motley_cue.conf` to enable any authorisation.
+The default configuration contains several examples (commented out), but you'll need to modify `/etc/motley_cue/motley_cue.conf` to enable any authorisation.
 
 You can find out your own groups with:
 ```
-pip install flaat
-flaat-userinfo --oidc egi
+mccli info --oidc <oidc-agent account name>
 ```
 
 
