@@ -139,17 +139,20 @@ It is as simple as this!
 
 # Server Installation
 
+Installation is mostly a matter of installing the packages:
+- `motley-cue` and `pam-ssh-oidc` (or `pam-ssh-oidc-autoconfig`)
+
 Packages are available at [https://repo.data.kit.edu](https://repo.data.kit.edu)
 
 Follow the instructions there to support the correct repository for apt or yum.
 
 The currently supported Linuxes are:
-- Debian (stable + testing)
-- Ubuntu (20.04 + 18.04)
-- Centos (7 + 8)
+- Debian (testing + stable + oldstable)
+- Ubuntu (22.04 + 20.04 + 18.04)
+- Centos (7 + 8 + Stream)
+- Rockylinux (8.5)
+- OpenSuse (15.4, 15.5)
 
-Installation is mostly a matter of installing the packages:
-- `motley-cue` and `pam-ssh-oidc`
 
 Details are described in the linked chapters
 [pam-ssh-oidc](pam-ssh-oidc.md) and [motley-cue](motley-cue.md)
@@ -159,6 +162,12 @@ Details are described in the linked chapters
 Are collected in our [FAQ](faq.md).
 
 # More Material
+
+The public demo instance runs at ssh-oidc-demo.data.kit.edu. Further
+documentation is available there (<https://ssh-oidc-demo.data.kit.edu>)
+
+- [Installation overview](installation.md)
+- [Configuration overview](configuration.md)
 
 We have two presentations:
 - The (short) overview: [https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY](https://docs.google.com/presentation/d/18GVVwuf3Ham0PBdnVf2MJm96PUPGBU_zzglfskG9LtY)
