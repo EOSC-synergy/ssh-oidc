@@ -76,7 +76,7 @@ host.)
 
 - **EGI Check-in**:
     ```
-    oidc-gen --pub --iss https://aai.egi.eu/oidc \
+    oidc-gen --pub --iss https://aai.egi.eu/auth/realms/egi \
         --scope "openid profile email offline_access \
             eduperson_entitlement eduperson_scoped_affiliation eduperson_unique_id" egi
     ```
