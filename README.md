@@ -183,3 +183,9 @@ effort of:
 - Praceclab PL
 - Helmholtz Federated IT Services (HIFIS)
 - Helmholtz Data Federation
+
+# Contact
+
+In case of questions, contact us at [ssh-oidc-contact@lists.kit.edu](mailto:ssh-oidc-contact@lists.kit.edu).
+
+If you would like to be kept up-to-date with the latest developments and releases, please subscribe to [ssh-oidc-users@lists.kit.edu](https://www.lists.kit.edu/sympa/subscribe/ssh-oidc-users).
