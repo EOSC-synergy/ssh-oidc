@@ -13,48 +13,6 @@ simplest-to-use approach.
 - No need for OIDC client registration on the server
 - No need to enter passwords more than once after reboot
 
-The final usage is as simple as:
-```
-mccli ssh <hostname>
-```
-
-<!--## Features-->
-<!--The tools the we use and describe in this context will offer many-->
-<!--features.-->
-<!---->
-<!--- The PAM MODULE **pam-ssh-oidc** allows ssh to accept Access Tokens in-->
-<!--    addition to passwords.-->
-<!--- The Mapping Daemon **motley-cue** is an additional daemon on the ssh-->
-<!--    server. It is in charge of "the magic behind the scenes" and deserves-->
-<!--    special attention by the ssh server administrators! It is in charge of-->
-<!--    several tasks:-->
-<!--    - Authorisation Decision: Is an incoming user welcome on the system or-->
-<!--        not. `motley-cue` offers **two dimensions** for making this decision:-->
-<!--        - **Membership**: -->
-<!--            - Memebership in a *Virtual Organisation* (a-->
-<!--                group managed remotely, e.g. on an OIDC Provider). A system-->
-<!--                administrator essentially delegates the decision which users-->
-<!--                may log in to the system to the administrator of the Virtual-->
-<!--                Organisation.-->
-<!--            - *Individual Users*: Of course, it is also possible to authorise-->
-<!--                individual users (just as before). However, now users are-->
-<!--                identified by the OIDC `sub` and `iss` claims.-->
-<!--        - **Assuranc**: The second dimension is based on **how well a user-->
-<!--            is known**. We use the [Refeds Assurance-->
-<!--            Framework](https://refeds.org/assurance) to describe a user.-->
-<!--            -->
-<!--        This allows to only give logins to users that are in a-->
-<!--        specific group AND have a certain level of assurance.-->
-<!--- A commandline tool **oidc-agent** that provides the functions for-->
-<!--`ssh-agent` but for ssh.-->
-<!--- A commandline wrapper **mcc-ssh** that -->
-<!--    - gets you an AccessToken-->
-<!--    - gets you an account on the remote (talks with `motley-cue`)-->
-<!--    - calls ssh and passes the AccessToken-->
-
-
-# Client Installation
-
 **For testing the client, we provide a demonstration server at
 [ssh-oidc-demo](https://ssh-oidc-web.data.kit.edu) server**.
 
@@ -62,16 +20,19 @@ Updated documentation is available here:
 [ssh-oidc documentation](https://ssh-oidc-doc.data.kit.edu).
 
 
+# Client Installation
+
 On the client you will need two basic tools:
 
-- oidc-agent: To obtain oidc AccessTokens
-- motley-cue command-line tool (`mccli`) for
-    - getting AccessTokens
-    - communicating with the remote motley-cue
-    - Calling SSH with an AccessToken
+- `oidc-agent`: To obtain oidc AccessTokens
+- `oinit`: The interface to the online CA
+
+Both tools are available for a number of linux distributions via our
+(repository server)[https://repo.data.kit.edu]. There is also a Mac
+Version available.
 
 
-## oidc-agent
+## `oidc-agent` configuration
 Please follow installation instructions at
 [https://indigo-dc.gitbook.io/oidc-agent/intro](https://indigo-dc.gitbook.io/oidc-agent/intro)
 
@@ -101,6 +62,21 @@ host.)
     ```
     oidc-gen --pub --iss https://accounts.google.com/ --flow device  --scope max google
     ```
+
+## `oinit` configuration
+
+Configure `ssh` to use the `oinit` mechanism (to obtain ssh certificates
+via OIDC) for specific hosts:
+
+```
+oinit add <hostname> [<CA-URL>]
+```
+
+Then you can use ssh as before (without username):
+
+```
+ssh <hostname>
+```
 
 <!--
 oidc agent is available as packages via [https://repo.data.kit.edu](https://repo.data.kit.edu)
