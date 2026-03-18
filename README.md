@@ -56,8 +56,10 @@ mccli ssh <hostname>
 # Client Installation
 
 **For testing the client, we provide a demonstration server at
-[ssh-oidc-demo](https://ssh-oidc-web.data.kit.edu) server**
-[ssh-oidc documentation](https://ssh-oidc-doc.data.kit.edu) server**
+[ssh-oidc-demo](https://ssh-oidc-web.data.kit.edu) server**.
+
+Updated documentation is available here:
+[ssh-oidc documentation](https://ssh-oidc-doc.data.kit.edu).
 
 
 On the client you will need two basic tools:
